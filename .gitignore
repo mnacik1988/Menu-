@@ -8,3 +8,10 @@ dist/
 coverage/
 *.log
 *.tsbuildinfo
+
+# Private local credentials — never publish
+Пароли и АПИ*
+*.pem
+*.key
+*.p12
+*.pfx
