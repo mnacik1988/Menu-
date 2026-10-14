@@ -1,0 +1,5 @@
+project_id = "qr-waiter"
+[functions.invite-staff]
+verify_jwt = false
+[functions.push-dispatch]
+verify_jwt = false
