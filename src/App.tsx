@@ -13,7 +13,7 @@ export default function App() {
  const [theme,setTheme]=useState<'light'|'dark'>(()=>document.documentElement.dataset.theme==='dark'?'dark':'light');
  useEffect(()=>{
   document.documentElement.dataset.theme=theme;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#181c19':'#faf8f5');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#141e23':'#f8f6f1');
   try{localStorage.setItem('qr-theme',theme);}catch{/* Theme still works when storage is unavailable. */}
  },[theme]);
  const qr=new URLSearchParams(location.search).get('qr');
