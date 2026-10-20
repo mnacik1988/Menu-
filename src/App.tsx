@@ -13,7 +13,7 @@ export default function App() {
  const [theme,setTheme]=useState<'light'|'dark'>(()=>document.documentElement.dataset.theme==='dark'?'dark':'light');
  useEffect(()=>{
   document.documentElement.dataset.theme=theme;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#141e23':'#f8f6f1');
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',theme==='dark'?'#111318':'#fcfbf8');
   try{localStorage.setItem('qr-theme',theme);}catch{/* Theme still works when storage is unavailable. */}
  },[theme]);
  const qr=new URLSearchParams(location.search).get('qr');
@@ -38,7 +38,7 @@ export default function App() {
  const member=memberships.find(m=>m.restaurant_id===rest);
  return <><header className="topbar"><a className="logo" href="/"><span className="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="8" height="8" rx="2"/><rect x="20" y="4" width="8" height="8" rx="2"/><rect x="4" y="20" width="8" height="8" rx="2"/><path d="M20 20h4v4h4v4h-8v-8Z"/></svg></span><span>QR <b>Waiter</b><small>{t('brand')}</small></span></a>
  <div className="top-actions"><button type="button" className="theme-toggle" onClick={()=>setTheme(theme==='light'?'dark':'light')} aria-label={t(theme==='light'?'darkTheme':'lightTheme')} title={t(theme==='light'?'darkTheme':'lightTheme')} aria-pressed={theme==='dark'}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{theme==='light'?<path d="M20.4 13.2A8.5 8.5 0 0 1 10.8 3.6 8.5 8.5 0 1 0 20.4 13.2Z"/>:<><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></>}</svg></button><label className="sr-only" htmlFor="language">{t('language')}</label><select id="language" value={lang} onChange={e=>setLang(e.target.value as Lang)}><option value="uk">UA</option><option value="ru">RU</option><option value="en">EN</option></select>
- {install&&<Button secondary onClick={()=>{install.prompt();setInstall(null);}}>{t('install')}</Button>}
+ {install&&<Button secondary onClick={()=>{install.prompt();setInstall(null);}}><span className="install-text">{t('install')}</span><svg className="install-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/></svg></Button>}
  {user&&!qr&&<Button secondary onClick={logout}>{t('logout')}</Button>}{qr&&<a className="small-link" href="/">{t('staffLogin')}</a>}</div></header>
  {!online&&<div className="message error" role="status">{t('offline')}</div>}
  {error&&<div className="message error" role="alert"><span>{error}</span><button type="button" className="ghost" onClick={()=>setError('')} aria-label={t('close')}>×</button></div>}

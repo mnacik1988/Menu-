@@ -1,5 +1,6 @@
 export type Lang = 'uk' | 'ru' | 'en';
 const uk: Record<string,string> = {
+ digitalMenu:"Ресторан · меню",fromMenu:"З нашого меню",
  dishes:'Страв',
  navigation:"Навігація",basket:"Кошик",basketTitle:"Ваш кошик",clearCart:"Очистити кошик",navCall:"Викликати",navBill:"Рахунок",addToBasket:"Додати в кошик",navTables:"Столики",navOrders:"Замовлення",navRequests:"Виклики",profile:"Профіль",tableFilter:"Фільтр столиків",
  lightTheme:'Увімкнути світлу тему', darkTheme:'Увімкнути темну тему',
@@ -23,6 +24,7 @@ const uk: Record<string,string> = {
  error_FORBIDDEN:'Недостатньо прав.', error_PRICE_CHANGED:'Ціна змінилася. Оновіть меню та перевірте кошик.', error_ITEM_UNAVAILABLE:'Страва більше недоступна.', error_SESSION_INVALID:'Сесія недійсна або закінчилась.', error_SESSION_CLOSED:'Сесію вже закрито.', error_TABLE_NOT_READY:'Столик ще не підготовлений.', error_UNFINISHED_ORDERS:'Завершіть замовлення перед закриттям сесії.', error_NO_WAITER:'За столиком не закріплено активного офіціанта.', error_RATE_LIMIT:'Забагато запитів. Спробуйте пізніше.', error_INVALID_TRANSITION:'Цей перехід статусу недоступний.', error_PRESENCE_EXPIRED:'Запит підтвердження закінчився.', error_QR_INACTIVE:'QR-код вимкнений.', error_CURRENCY_LOCKED:'Після створення замовлень валюта фіксується.', error_RESTAURANT_SUSPENDED:'Заклад призупинено.',
 };
 const ru: Record<string,string> = {
+ digitalMenu:"Ресторан · меню",fromMenu:"Из нашего меню",
  dishes:'Блюд',
  navigation:"Навигация",basket:"Корзина",basketTitle:"Ваша корзина",clearCart:"Очистить корзину",navCall:"Вызвать",navBill:"Счёт",addToBasket:"Добавить в корзину",navTables:"Столики",navOrders:"Заказы",navRequests:"Вызовы",profile:"Профиль",tableFilter:"Фильтр столиков",
  lightTheme:'Включить светлую тему', darkTheme:'Включить тёмную тему',
@@ -36,6 +38,7 @@ const ru: Record<string,string> = {
  error_FORBIDDEN:'Недостаточно прав.',error_PRICE_CHANGED:'Цена изменилась. Обновите меню и проверьте корзину.',error_ITEM_UNAVAILABLE:'Блюдо больше недоступно.',error_SESSION_INVALID:'Сессия недействительна или истекла.',error_SESSION_CLOSED:'Сессия уже закрыта.',error_TABLE_NOT_READY:'Столик ещё не подготовлен.',error_UNFINISHED_ORDERS:'Завершите заказы перед закрытием сессии.',error_NO_WAITER:'Нет активного ответственного официанта.',error_RATE_LIMIT:'Слишком много запросов. Попробуйте позже.',error_INVALID_TRANSITION:'Переход статуса недоступен.',error_PRESENCE_EXPIRED:'Запрос присутствия истёк.',error_QR_INACTIVE:'QR-код отключён.',error_CURRENCY_LOCKED:'После создания заказов валюта фиксируется.',error_RESTAURANT_SUSPENDED:'Заведение приостановлено.'
 };
 const en: Record<string,string> = {
+ digitalMenu:"Restaurant · menu",fromMenu:"From our menu",
  dishes:'Dishes',
  navigation:"Navigation",basket:"Basket",basketTitle:"Your basket",clearCart:"Clear basket",navCall:"Call",navBill:"Bill",addToBasket:"Add to basket",navTables:"Tables",navOrders:"Orders",navRequests:"Requests",profile:"Profile",tableFilter:"Table filter",
  lightTheme:'Switch to light theme', darkTheme:'Switch to dark theme',
