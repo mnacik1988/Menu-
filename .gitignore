@@ -1,0 +1,17 @@
+node_modules/
+.npm-cache/
+dist/
+.env
+.env.*
+!.env.example
+.supabase/
+coverage/
+*.log
+*.tsbuildinfo
+
+# Private local credentials — never publish
+Пароли и АПИ*
+*.pem
+*.key
+*.p12
+*.pfx
